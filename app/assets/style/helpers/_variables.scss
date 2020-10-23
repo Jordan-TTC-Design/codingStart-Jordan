@@ -65,7 +65,8 @@ $colors: map-merge(
   ),
   $colors
 );
-
+//**針對每次專案的色彩計畫不同，這裡修改與新增：
+//(新增顏色註記：)
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
@@ -77,6 +78,7 @@ $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
+
 $theme-colors: map-merge(
   (
     "primary":    $primary,
@@ -137,14 +139,27 @@ $enable-deprecation-messages:                 true !default;
 $spacer: 1rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
+//**我修改增加了一些間距！！
 $spacers: map-merge(
   (
     0: 0,
     1: ($spacer * .25),
     2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    // 3: $spacer,
+    3: ($spacer * .75),
+    // 4: ($spacer * 1.5),
+    4: ($spacer * 1),
+    // 5: ($spacer * 3),
+    5: ($spacer * 1.25),
+    6: ($spacer * 1.5),
+    7: ($spacer * 2),
+    8: ($spacer * 2.25),
+    9: ($spacer * 3),
+    10: ($spacer * 4),
+    11: ($spacer * 4.5),
+    12: ($spacer * 5),
+    13: ($spacer * 6),
+    14: ($spacer * 6.5)
   ),
   $spacers
 );
@@ -287,10 +302,13 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
+//**自己增加了medium、black的字重
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;          
 $font-weight-bold:            700 !default;
+$font-weight-black:           900 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
